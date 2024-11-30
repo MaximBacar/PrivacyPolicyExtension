@@ -16,3 +16,8 @@ The server sends requests to the OpenAI GPT API to summarize the privacy policie
 Concordia University
 Fall 2024
 
+## Demo 
+[Video Demo](https://www.youtube.com/watch?v=UbYk84QSeGQ).
+
+
+

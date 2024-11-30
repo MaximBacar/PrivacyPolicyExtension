@@ -1,0 +1,19 @@
+
+
+{
+    "manifest_version": 3,
+    "name": "Privacy Policy Finder",
+    "version": "1.0",
+    "description": "Find the privacy policy page of the current website",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  

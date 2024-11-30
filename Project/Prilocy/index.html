@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Privacy Policy</title>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <div id="start-screen">
+    <h2 style="margin: 0; font-size: 10px; font-weight: bold;">website</h2>
+    <h1 class="page-url" style="margin: 0; padding: 0; transform: translateY(-5px); font-weight: lighter;">stripe.com</h1>
+    <div id="loading" style="width: 100%; display: none; align-items: center; justify-content: center; margin-top: 80px; flex-direction: column;">
+      <p>Analyzing</p>
+      <div class="loader"></div>
+    </div>
+    
+    <button id="findPolicyButton" style="background-color: black; color: white; border: none; width: 100%; height: 40px; margin-top: 50px;">Analyze</button>
+  </div>
+  <div id="content">
+    <h1 class="page-url"></h1>
+    
+    <h2 class="privacy-score-title">Privacy Score</h2>
+    <div id="score-box">
+      <p id="score"></p>
+      <p id="out-of-ten">/10</p>
+    </div>
+
+    <h2 class="privacy-summary-title">Privacy Policy Summary</h2>
+
+    <div id="privacy-summary-box"></div>
+
+    <h2 class="privacy-negative-title">Negative</h2>
+
+    <div id="negative-summary-box"></div>
+
+  </div>
+  
+  
+  <p id="result"></p>
+</body>
+</html>
+
+<style>
+  html{
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  body{
+    width: 300px;
+    height: 500px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #start-screen{
+    width: 60%;
+  }
+
+  #content{
+    width: 80%;
+    height: 80%;
+    display:none;
+    overflow-y: scroll;
+  }
+  h1{
+    font-size: 30px;
+    margin: 0;
+  }
+  #content h2{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+
+  #score-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:flex-end;
+    margin: 0px 0px 20px;
+
+  }
+  #score-box #out-of-ten{
+    font-size: 12px;
+    margin: 0px 0px 5px 0px;
+  }
+  #score-box #score{
+    font-size: 40px;
+    margin: 0;
+  }
+
+  #privacy-summary-box{
+    width: 100%;
+
+  }
+  .box{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .box #square-box{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+  }
+  #privacy-summary-box .box #square-box #square{
+    background-color: black;
+    width: 4px;
+    height: 4px;
+  }
+  .box p{
+    width: 95%;
+    font-size: 10px;
+    font-weight: lighter;
+  }
+
+
+  #negative-summary-box{
+    width: 100%;
+
+  }
+  #negative-summary-box .box #square-box #square{
+    background-color: red;
+    width: 4px;
+    height: 4px;
+  }
+
+
+  .privacy-negative-title{
+    color: red;
+  }
+  .loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid black; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s ease infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  
+</style>
+
+
